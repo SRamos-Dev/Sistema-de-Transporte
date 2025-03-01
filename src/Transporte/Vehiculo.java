@@ -1,26 +1,47 @@
+package Transporte;
+
 public abstract class Vehiculo {
-    //Atributo de la clase Vehiculo protected porque sera heredado
     protected int velocidadMaxima;
+    protected String marca;
+    protected String modelo;
 
-    //Constructor de la clase Vehiculo
-    public Vehiculo(int velocidadMaxima) {
+    public Vehiculo(int velocidadMaxima, String marca, String modelo){
         this.velocidadMaxima = velocidadMaxima;
+        this.marca = marca;
+        this.modelo = modelo;
     }
-
-    //Metodo get de la clase Vehiculo
-    public int getVelocidadMaxima() {
+    
+    public int getVelocidadMaxima(){
         return velocidadMaxima;
     }
 
-    //Metodo arrancar() de la clase Vehiculo
-    public void arrancar(){
-        System.out.println("El vehiculo esta en marcha");
+    public String getMarca(){
+        return marca;
     }
 
-    //Metodo abstracto de la clase Vehiculo
-    public abstract void describir();
+    public String getModelo(){
+        return modelo;
+    }
 
-    //Metodo abstracto de la clase Vehiculo
-    public abstract void encenderMotor();
+    public void setVelocidadMaxima(int velocidadMaxima){
+        if(velocidadMaxima >= 0){ 
+            this.velocidadMaxima = velocidadMaxima;
+        } else {
+            System.out.println("La velocidad no puede ser negativa.");
+        } 
+    }
+
+    public void setMarca(String marca){
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo){
+        this.modelo = modelo;
+    }
     
+    public void arrancar(){
+        System.out.println("El vehiculo esta en marcha.");
+    }
+
+    public abstract void describir();
 }
