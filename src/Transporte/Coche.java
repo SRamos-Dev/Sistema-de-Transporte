@@ -1,41 +1,42 @@
 public class Coche extends Vehiculo implements ConMotor {
-    
-    private String marca, modelo, matricula;
-    private int precio;
 
-    public Coche(int velocidadMaxima, String marca, String modelo, String matricula, int precio){
+    // Atributos propios de la clase Coche
+    private String marca, modelo, matricula;
+
+    // Constructor de la clase Coche, hereda el constructor
+    // de la clase Vehiculo para el atributo velocidadMaxima
+    public Coche(int velocidadMaxima, String marca, String modelo, String matricula) {
         super(velocidadMaxima);
-        this.marca=marca;
-        this.modelo=modelo;
-        this.matricula=matricula;
-        this.precio=precio;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.matricula = matricula;
     }
 
-    public String getMarca(){
+    // Metodos get de la clase Coche
+    public String getMarca() {
         return marca;
     }
 
-    public String getModelo(){
+    public String getModelo() {
         return modelo;
     }
 
-    public String getMatricula(){
+    public String getMatricula() {
         return matricula;
     }
 
-    public int getPrecio(){
-        return precio;
-    }
-
-    public void describir(){
+    // Implementacion del metodo abstracto decribir de la superclase Vehiculo
+    @Override
+    public void describir() {
         System.out.println("Automovil de la marca " + marca +
-        "modelo " + modelo + "y con matricula " + matricula + 
-        ". Este automovil posee una velocidad maxima de " + velocidadMaxima +
-        "y un modico precio de " + precio);
+                " modelo " + modelo + " y con matricula " + matricula +
+                ". Este automovil posee una velocidad máxima de " + velocidadMaxima +
+                "km/h.");
     }
 
-    public void encenderMotor(){
-        System.out.println("Motor encendico");
+    // Implementacion del metodo encenderMotor de la interfaz ConMotor
+    public void encenderMotor() {
+        System.out.println("El motor del coche está encendido");
     }
 
 }

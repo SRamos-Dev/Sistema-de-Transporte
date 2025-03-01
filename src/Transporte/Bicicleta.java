@@ -1,29 +1,29 @@
-public class Bicicleta extends Vehiculo implements SinMotor{
+public class Bicicleta extends Vehiculo implements SinMotor {
 
+    // Atributos propios de la clase Bicicleta
     private String marca;
-    private int precio;
 
-    public Bicicleta(int velocidadMaxima, String marca, int precio){
+    // constructor de la clase Bicicleta, hereda el constructor
+    // de la clase vehiculo para el atributo velocidadMaxima
+    public Bicicleta(int velocidadMaxima, String marca) {
         super(velocidadMaxima);
-        this.marca=marca;
-        this.precio=precio;
+        this.marca = marca;
     }
 
-    public String getMarca(){
+    // Métodos get de la clase Bicicleta
+    public String getMarca() {
         return marca;
     }
 
-    public int getPrecio(){
-        return precio;
+    // Implementacion del metodo abstracto decribir de la superclase Vehiculo
+    public void describir() {
+        System.out.println("Esta es una bicicleta de la marca " + marca +
+                ". Posee una velocidad máxima es " + velocidadMaxima + " km/h.");
     }
 
-    //Completar metodo hederado
-    public void describir(){
-        System.out.println("");
-    }
-
-    //Completar metodo abstracto
-    public void usarFuerzaHumana(){
-        System.out.println("");
+    // Implementacion del metodo usarFuerzaHumana de la interfaz SinMotor
+    public void usarFuerzaHumana() {
+        System.out.println(
+                "Usando fuerza humana para mover la bicicleta");
     }
 }
