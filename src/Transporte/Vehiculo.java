@@ -20,4 +20,7 @@ public abstract class Vehiculo {
     //Metodo abstracto de la clase Vehiculo
     public abstract void describir();
 
+    //Metodo abstracto de la clase Vehiculo
+    public abstract void encenderMotor();
+    
 }

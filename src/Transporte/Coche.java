@@ -6,7 +6,7 @@ public class Coche extends Vehiculo implements ConMotor {
     // Constructor de la clase Coche, hereda el constructor
     // de la clase Vehiculo para el atributo velocidadMaxima
     public Coche(int velocidadMaxima, String marca, String modelo, String matricula) {
-        super(velocidadMaxima);
+       super(velocidadMaxima); 
         this.marca = marca;
         this.modelo = modelo;
         this.matricula = matricula;
