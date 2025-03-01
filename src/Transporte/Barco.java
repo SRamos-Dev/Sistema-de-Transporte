@@ -31,6 +31,8 @@ public class Barco extends Vehiculo implements ConMotor {
     public void describir() {
         System.out.println(
             "Barco de la marca "+marca+"y modelo "+modelo+
+            " con matrícula "+matricula+".\n"+
+            "Este barco posee una velocidad máxima de "+velocidadMaxima+
             " con matrícula "+matricula+
             ". Este barco posee una velocidad máxima de "+velocidadMaxima+
             " km/h y lleva el nombre de "+nombre+".");

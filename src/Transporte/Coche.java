@@ -20,6 +20,8 @@ public class Coche extends Vehiculo implements ConMotor {
     @Override
     public void describir() {
         System.out.println("Automovil de la marca "+marca+
+                " modelo "+modelo+" y con matricula "+matricula+".\n"+
+                "Este automovil posee una velocidad máxima de "+velocidadMaxima+"km/h.");
                 " modelo "+modelo+" y con matricula "+matricula+
                 ". Este automovil posee una velocidad máxima de "+velocidadMaxima+"km/h.");
     }

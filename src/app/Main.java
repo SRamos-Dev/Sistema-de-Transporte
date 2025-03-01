@@ -7,28 +7,30 @@ import Transporte.Avion;
 
 public class Main {
 
-    public static void main (String[] args){
+  public static void main(String[] args) {
+    
+    Coche car = new Coche(180, "Mazda", "CX-30", "AHF6541");
+    Bicicleta bike = new Bicicleta(50, "BWIN", "Rockrider 340");
+    Barco ship = new Barco(80, "Bavaria", "VISION46" , "7-LU-2-000-10", "Adrastea");
+    Avion plane = new Avion(90, "Boing", "747", "EC-GRP");
 
-        Coche coche1 = new Coche(195, "Toyota", "AE86");
-        coche1.arrancar();
-        coche1.encenderMotor();
-        coche1.describir();
-
-        Bicicleta bicicleta1 = new Bicicleta(80, "Orbea", "OIZ M-LTD");
-        bicicleta1.arrancar();
-        bicicleta1.usarFuerzaHumana();
-        bicicleta1.describir();
-
-        Barco barco1 = new Barco(58, "Incat", "045");
-        barco1.arrancar();
-        barco1.encenderMotor();
-        barco1.describir();
-
-        Avion avion1 = new Avion(492, "Airbus", "Beluga XL");
-        avion1.arrancar();
-        avion1.encenderMotor();
-        avion1.describir();
-
-        System.out.println(avion1.getMarca());
+    car.arrancar();
+    car.encenderMotor();
+    car.describir();
+    
+    System.out.println("");
+    bike.arrancar();
+    bike.usarFuerzaHumana();
+    bike.describir();
+    
+    System.out.println("");
+    ship.arrancar();  
+    ship.encenderMotor();
+    ship.describir();
+    
+    System.out.println("");
+    plane.arrancar();
+    plane.encenderMotor();
+    plane.describir();
     }
 }
