@@ -12,7 +12,7 @@ public class Bicicleta extends Vehiculo implements SinMotor {
         System.out.println(
             "Esta es una bicicleta marca "+marca+
             " y modelo "+modelo+".\n"+
-            "Posee una velocidad máxima es " + velocidadMaxima + "km/h.");
+            "Posee una velocidad máxima es " + velocidadMaxima + "km/h."+
             " y modelo "+modelo+
             ". Posee una velocidad máxima es " + velocidadMaxima + "km/h.");
     }
