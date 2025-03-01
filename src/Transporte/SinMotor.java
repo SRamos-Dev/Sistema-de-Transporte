@@ -1,3 +1,5 @@
+public interface SinMotor {
+    public void usarFuerzaHumana();
 
 public interface SinMotor {
     default void usarFuerzaHumana(){
