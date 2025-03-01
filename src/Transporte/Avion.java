@@ -22,7 +22,7 @@ public final class Avion extends Vehiculo implements ConMotor {
         System.out.println("Avión de la marca "+marca+" modelo "+modelo+
 
                 " y matrícula"+matricula+".\n"+
-                "Este avión posee una velocidad máxima de "+velocidadMaxima+"km/h.");
+                "Este avión posee una velocidad máxima de "+velocidadMaxima+"km/h."+
                 " y matrícula "+matricula+
                 ". Este avión posee una velocidad máxima de "+velocidadMaxima+"km/h.");
 
