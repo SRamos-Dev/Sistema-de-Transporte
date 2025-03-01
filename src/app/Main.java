@@ -10,9 +10,10 @@ public static void main(String[] args) {
     bike.describir();
     ship.describir();
     plane.describir();
-}
-  
-    public static void main(String[] args) {
-        System.out.println();
+
+    car.encenderMotor();
+    ship.encenderMotor();   
+    plane.encenderMotor();
+
     }
 }
