@@ -1,3 +1,8 @@
+package Transporte;
+
 public interface SinMotor {
-    void usarFuerzaHumana();
+    
+    default void usarFuerzaHumana(){
+        System.out.println("Usando fuerza humana para moverse.");
+    }
 }
