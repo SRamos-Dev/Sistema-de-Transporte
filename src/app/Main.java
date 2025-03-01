@@ -28,5 +28,7 @@ public class Main {
         avion1.arrancar();
         avion1.encenderMotor();
         avion1.describir();
+
+        System.out.println(avion1.getMarca());
     }
 }
