@@ -1,11 +1,13 @@
-import Transporte.Coche;
+package app;
+
+import Transporte.Coche; 
 import Transporte.Bicicleta;
 import Transporte.Barco;
 import Transporte.Avion;
 
 public class Main {
 
-public static void main(String[] args) {
+  public static void main(String[] args) {
     
     Coche car = new Coche(180, "Mazda", "CX-30", "AHF6541");
     Bicicleta bike = new Bicicleta(50, "BWIN", "Rockrider 340");
@@ -30,6 +32,5 @@ public static void main(String[] args) {
     plane.arrancar();
     plane.encenderMotor();
     plane.describir();
-
     }
 }
