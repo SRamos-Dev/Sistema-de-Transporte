@@ -5,7 +5,6 @@ public class Bicicleta extends Vehiculo implements SinMotor {
     public Bicicleta(int velocidadMaxima, String marca, String modelo){
         super(velocidadMaxima, marca, modelo);
     }
-
    
     @Override
     public void describir() {
@@ -20,3 +19,4 @@ public class Bicicleta extends Vehiculo implements SinMotor {
         System.out.println("Usando fuerza humana para mover la bicicleta.");
     }
 }
+
