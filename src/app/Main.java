@@ -4,6 +4,7 @@ import Transporte.Coche;
 import Transporte.Bicicleta;
 import Transporte.Barco;
 import Transporte.Avion;
+import Interacciones.Menu;
 
 public class Main {
 
@@ -13,6 +14,9 @@ public class Main {
     Bicicleta bike = new Bicicleta(50, "BWIN", "Rockrider 340");
     Barco ship = new Barco(80, "Bavaria", "VISION46" , "7-LU-2-000-10", "Adrastea");
     Avion plane = new Avion(1060, "Boing", "747", "EC-GRP");
+
+    Menu menu = new Menu();
+    menu.mainMenu();
 
     car.arrancar();
     car.encenderMotor();

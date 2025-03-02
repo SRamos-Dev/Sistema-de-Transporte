@@ -23,7 +23,6 @@ public final class Avion extends Vehiculo implements ConMotor {
             "Avión de la marca "+marca+" modelo "+modelo+
             " y matrícula "+matricula+".\n"+
             "Este avión posee una velocidad máxima de "+velocidadMaxima+"km/h.");
-
     }
 
     @Override
