@@ -1,6 +1,6 @@
 package Transporte;
 
-public final class Avion extends Vehiculo implements ConMotor {
+public final class Avion extends Vehiculo implements Robable {
     
     private String matricula;
 

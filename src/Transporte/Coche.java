@@ -1,6 +1,6 @@
 package Transporte;
 
-public class Coche extends Vehiculo implements ConMotor {
+public class Coche extends Vehiculo implements Robable {
 
     private String matricula;
 
