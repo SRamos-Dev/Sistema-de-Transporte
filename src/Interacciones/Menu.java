@@ -1,7 +1,12 @@
 package Interacciones;
 
-public class Menu {
-    public static void main(String[] args){
+public class Menu implements MenuStep1 {
+    public static String title;
+    
+    public Menu(String title){
+        Menu.title = title;
+    }
+    public static void entryMenu(){
         String title = 
 
             "\n________________________________________________________________________________________________________\n"+
@@ -25,5 +30,6 @@ public class Menu {
         for (String line : lines) {
             System.out.printf("%" + ((200 + line.length()) / 2) + "s%n", line);
         }
+        
     }
 }
