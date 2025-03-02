@@ -15,5 +15,7 @@ public class Main {
     Menu menu = new Menu(Menu.title);
     Menu.entryMenu();
     menu.runMenu();
+
+    System.out.println("\n"+"Gracias por utilizar el programa!, CERRANDO...\n");
     }
 }
