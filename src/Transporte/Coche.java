@@ -2,11 +2,31 @@ package Transporte;
 
 public class Coche extends Vehiculo implements ConMotor {
 
-    public Coche(int velocidadMaxima, String marca, String modelo){
+    private String matricula;
+
+    public Coche(int velocidadMaxima, String marca, String modelo, String matricula){
         super(velocidadMaxima, marca, modelo);
+        this.matricula = matricula;
+       }
+
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void describir(){
-        System.out.println("El "+marca+" "+modelo+" alcanza una velocidad maxima de "+velocidadMaxima+"Kms/h.");
+    public void setMatricula(String matricula){
+        this.matricula = matricula;
+    }
+
+    @Override
+    public void describir() {
+        System.out.println(
+            "Automovil de la marca "+marca+
+            " modelo "+modelo+" y con matricula "+matricula+".\n"+
+            "Este automovil posee una velocidad máxima de "+velocidadMaxima+"km/h.");
+    }
+
+    @Override
+    public void encenderMotor() {
+        System.out.println("El motor del coche está encendido.");
     }
 }

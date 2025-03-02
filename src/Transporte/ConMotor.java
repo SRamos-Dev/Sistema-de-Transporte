@@ -6,4 +6,3 @@ public interface ConMotor {
         System.out.println("El motor esta encendido.");
     }
 }  
-

@@ -5,9 +5,18 @@ public class Bicicleta extends Vehiculo implements SinMotor {
     public Bicicleta(int velocidadMaxima, String marca, String modelo){
         super(velocidadMaxima, marca, modelo);
     }
+   
+    @Override
+    public void describir() {
+        System.out.println(
+            "Esta es una bicicleta marca "+marca+
+            " y modelo "+modelo+".\n"+
+            "Posee una velocidad máxima es " + velocidadMaxima + "km/h.");
+    }
 
-    public void describir(){
-        System.out.println("La bicleta "+marca+" "+modelo+" alcanza una velocidad maxima de "+velocidadMaxima+"Kms/h.");
+    @Override
+    public void usarFuerzaHumana() {
+        System.out.println("Usando fuerza humana para mover la bicicleta.");
     }
 }
 
