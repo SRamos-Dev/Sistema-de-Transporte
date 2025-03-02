@@ -39,9 +39,12 @@ public interface MenuStep1 {
             execute = (programType == 1 || programType ==2 ) ? true : false;
             if (!execute) break;
             
-            MenuDefault menuDefault = new MenuDefault();
-            menuDefault.runDefault();
-        } user.close();
+            if (programType == 2) {
+                MenuDefault menuDefault = new MenuDefault();
+                menuDefault.runDefault();
+            } else return;
+
+        }
         
     } 
 }
