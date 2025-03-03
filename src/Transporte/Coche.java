@@ -4,6 +4,10 @@ public class Coche extends Vehiculo implements Robable {
 
     private String matricula;
 
+    // CONSTRUCTOR VACIO
+    public Coche() {
+    };
+
     public Coche(int velocidadMaxima, String marca, String modelo, String matricula) {
         super(velocidadMaxima, marca, modelo);
         this.matricula = matricula;

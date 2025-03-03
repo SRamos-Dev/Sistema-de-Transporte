@@ -18,9 +18,12 @@ public interface MenuStep1 {
     public static final String BOLD = "\u001B[1m";
     public static final String UNBOLD = "\u001B[21m";
 
+    //DECLARACION DE SCANNER 
+    Scanner user = new Scanner(System.in);
+
     public default void runMenu() {
 
-        Scanner user = new Scanner(System.in);
+        
         boolean execute;
 
         while (true) {
@@ -34,6 +37,7 @@ public interface MenuStep1 {
                             + RESET);
 
             int programType = user.nextInt();
+
             execute = (programType == 1 || programType == 2) ? true : false;
             if (!execute)
                 break;
@@ -43,8 +47,10 @@ public interface MenuStep1 {
                 menuDefault.runDefault();
             } else
                 return;
-
+            
         }
-
+        //SCANNER CLOSE
+        user.close();
     }
+
 }
