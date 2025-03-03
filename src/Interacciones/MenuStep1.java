@@ -39,9 +39,14 @@ public interface MenuStep1 {
             int programType = user.nextInt();
 
             execute = (programType == 1 || programType == 2) ? true : false;
-            if (!execute)
+            if (!execute){
+                System.out.println("\n"+"Gracias por utilizar el programa!, CERRANDO...\n");
                 break;
-
+            }
+            if (programType == 1){
+                MenuCustom menuCustom = new MenuCustom();
+                menuCustom.runCustom();
+            }
             if (programType == 2) {
                 MenuDefault menuDefault = new MenuDefault();
                 menuDefault.runDefault();
