@@ -18,12 +18,11 @@ public interface MenuStep1 {
     public static final String BOLD = "\u001B[1m";
     public static final String UNBOLD = "\u001B[21m";
 
-    //DECLARACION DE SCANNER 
+    // DECLARACION DE SCANNER
     Scanner user = new Scanner(System.in);
 
     public default void runMenu() {
 
-        
         boolean execute;
 
         while (true) {
@@ -39,18 +38,64 @@ public interface MenuStep1 {
             int programType = user.nextInt();
 
             execute = (programType == 1 || programType == 2) ? true : false;
-            if (!execute)
+            if (!execute) {
+                System.out.println("\n" +
+                        "Gracias por utilizar el programa!, CERRANDO...\n");
                 break;
-
+            }
+            if (programType == 1) {
+                MenuCustom menuCustom = new MenuCustom();
+                menuCustom.runCustom();
+            }
             if (programType == 2) {
                 MenuDefault menuDefault = new MenuDefault();
                 menuDefault.runDefault();
             } else
                 return;
-            
+
         }
-        //SCANNER CLOSE
+        // SCANNER CLOSE
         user.close();
     }
+
+    /*
+     * / public default void runMenu() {
+     * 
+     * int programType = 0;
+     * 
+     * do {
+     * System.out.println(
+     * CYAN + BOLD +
+     * "\n SELECCIONA EL TIPO DE PROGRAMA QUE DESEAS EJECUTAR: \n\n" +
+     * RESET +
+     * BLUE + "1. " + GREEN + "Experiencia personalizada \n" +
+     * BLUE + "2. " + GREEN + "Experiencia por defecto \n\n" +
+     * BLUE + "3. " + GREEN + "Salir \n"
+     * + RESET);
+     * 
+     * programType = user.nextInt();
+     * 
+     * switch (programType) {
+     * case 1:
+     * MenuCustom menuCustom = new MenuCustom();
+     * menuCustom.runCustom();
+     * break;
+     * 
+     * case 2:
+     * MenuDefault menuDefault = new MenuDefault();
+     * menuDefault.runDefault();
+     * break;
+     * 
+     * case 3:
+     * System.out.println("\n" +
+     * "Gracias por utilizar el programa!, CERRANDO...\n");
+     * break;
+     * 
+     * }
+     * } while (programType != 3);
+     * 
+     * 
+     * }
+     */
 
 }
