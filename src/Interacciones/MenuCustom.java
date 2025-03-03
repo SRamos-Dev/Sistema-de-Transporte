@@ -151,16 +151,13 @@ public class MenuCustom implements MenuStep1, Robable {
                 }
                 // ADICION OPCION 2 SUBMENU CUSTOMIZABLE
                 else if (operacionVehiculo == 2) {
-                        System.out.println("\nSelecciona la zona donde se encuentra.\n\n");
+                        System.out.println("\nSelecciona la zona donde se dirige.\n\n");
 
-                        System.out.println("Zonas de " + provincias.get(provinciaId - 1) + ":");
-                        ArrayList<String> zonasProvincia2 = zonas.get(provinciaId - 1);
-
-                        for (int i = 0; i < zonasProvincia2.size(); i++) {
-                                System.out.println((i + 1) + ". " + zonasProvincia2.get(i));
+                        for (int i = 0; i < zonasProvincia.size(); i++) {
+                                System.out.println((i + 1) + ". " + zonasProvincia.get(i));
                         }
-
-                        zonaId = (user.nextInt() - 1);
+                        int zonaDestino = (user.nextInt() - 1);
+                        System.out.println("\nTu " + nombreVehiculo + " ha sido desplazado de " + zonasProvincia.get(zonaId) + " a " + zonasProvincia.get(zonaDestino) + "\n");
                 }
 
                 //CONDICIONAL PARA MOSTRAR EN PANTALLA EL METODO DESCRIBIR() DE ACUERDO AL VEHICULO INGRESADO POR USUARIO
