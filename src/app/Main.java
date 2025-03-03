@@ -1,5 +1,3 @@
-package app;
-
 import Transporte.Coche; 
 import Transporte.Bicicleta;
 import Transporte.Barco;
