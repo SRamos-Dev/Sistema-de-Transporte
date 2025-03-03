@@ -1,18 +1,16 @@
+import Interacciones.Menu;
+import Interacciones.MenuCustom;
+
+
 public class Main {
 
-public static void main(String[] args) {
-    Coche car = new Coche(180, "Mazda", "CX-30", "AHF6541");
-    Bicicleta bike = new Bicicleta(50, "BWIN") ;
-    Barco ship = new Barco(80, "Bavaria", "7-LU-2-000-10", "Adrastea");
-    Avion plane = new Avion(90, "Boing", "EC-GRP");
+    public static void main (String[] args){
 
-    car.describir();
-    bike.describir();
-    ship.describir();
-    plane.describir();
-}
-  
-    public static void main(String[] args) {
-        System.out.println();
+    Menu menu = new Menu(Menu.title);
+    MenuCustom menuCustom = new MenuCustom();
+    Menu.entryMenu();
+    menu.runMenu();
+    menuCustom.runCustom();
+    System.out.println("\n"+"Gracias por utilizar el programa!, CERRANDO...\n");
     }
 }

@@ -1,52 +1,36 @@
-public final class Avion extends Vehiculo implements ConMotor {
+package Transporte;
 
-    // Atributos propios de la clase Avion
-    String marca, matricula;
+public final class Avion extends Vehiculo implements Robable {
 
-    // Constructor de la clase Avion, hereda el constructor
-    // de la clase vehiculo para el atributo velocidadMaxima
-    public Avion(int velocidadMaxima, String marca, String matricula) {
-        super(velocidadMaxima);
-        this.marca = marca;
-        this.matricula = matricula;
+    private String matricula;
+
+    // CONSTRUCTOR VACIO
+    public Avion() {
     }
 
-    // Metodos get de la clase Avion
-    public String getMarca() {
-        return marca;
+    public Avion(int velocidadMaxima, String marca, String modelo, String matricula) {
+        super(velocidadMaxima, marca, modelo);
+        this.matricula = matricula;
     }
 
     public String getMatricula() {
         return matricula;
     }
 
-    // Implementacion del metodo abstracto decribir de la superclase Vehiculo
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    @Override
     public void describir() {
-        System.out.println("Avión de la marca " + marca +
-                " y matrícula " + matricula +
-                ". Este avión posee una velocidad máxima de " + velocidadMaxima +
-                " km/h.");
+        System.out.println(
+                "Avión de la marca " + marca + " modelo " + modelo +
+                        " y matrícula " + matricula + ".\n" +
+                        "Este avión posee una velocidad máxima de " + velocidadMaxima + "km/h.");
     }
 
-    // Implementacion del metodo encenderMotor de la interfaz ConMotor
-    public void encenderMotor() {
-        System.out.println("El motor del avión está encendido");
-    }
-
-final public class Avion extends Vehiculo implements ConMotor{
-    
-    public Avion(int velocidadMaxima) {
-            super(velocidadMaxima);
-        }
-    
     @Override
     public void encenderMotor() {
         System.out.println("El motor del avión está encendido.");
     }
-
-    @Override
-    public void describir() {
-        System.out.println("Soy un avión que vuela a "+ this.velocidadMaxima + "km/h");
-    }
-
 }

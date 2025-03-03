@@ -1,29 +1,26 @@
+package Transporte;
+
 public class Bicicleta extends Vehiculo implements SinMotor {
 
-    // Atributos propios de la clase Bicicleta
-    private String marca;
+    // CONSTRUCTOR VACIO
+    public Bicicleta() {
 
-    // constructor de la clase Bicicleta, hereda el constructor
-    // de la clase vehiculo para el atributo velocidadMaxima
-    public Bicicleta(int velocidadMaxima, String marca) {
-        super(velocidadMaxima);
-        this.marca = marca;
     }
 
-    // Métodos get de la clase Bicicleta
-    public String getMarca() {
-        return marca;
+    public Bicicleta(int velocidadMaxima, String marca, String modelo) {
+        super(velocidadMaxima, marca, modelo);
     }
 
-    // Implementacion del metodo abstracto decribir de la superclase Vehiculo
+    @Override
     public void describir() {
-        System.out.println("Esta es una bicicleta de la marca " + marca +
-                ". Posee una velocidad máxima es " + velocidadMaxima + " km/h.");
+        System.out.println(
+                "Esta es una bicicleta marca " + marca +
+                        " y modelo " + modelo + ".\n" +
+                        "Posee una velocidad máxima es " + velocidadMaxima + "km/h.");
     }
 
-    // Implementacion del metodo usarFuerzaHumana de la interfaz SinMotor
+    @Override
     public void usarFuerzaHumana() {
-        System.out.println(
-                "Usando fuerza humana para mover la bicicleta");
+        System.out.println("Usando fuerza humana para mover la bicicleta.");
     }
 }
