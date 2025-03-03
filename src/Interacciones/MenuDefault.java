@@ -1,9 +1,6 @@
 package Interacciones;
 
-import Transporte.Avion;
-import Transporte.Barco;
-import Transporte.Bicicleta;
-import Transporte.Coche;
+import Transporte.*;
 
 public class MenuDefault {
     public void runDefault() {

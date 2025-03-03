@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Transporte.Avion;
-import Transporte.Barco;
-import Transporte.Bicicleta;
-import Transporte.Coche;
-import Transporte.Robable;
+import Transporte.*;
 
 public class MenuCustom implements MenuStep1, Robable {
 
