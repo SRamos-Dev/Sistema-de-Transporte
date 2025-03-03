@@ -60,9 +60,17 @@ public class MenuCustom implements MenuStep1, Robable {
                                 String modeloCar = user.next();
                                 System.out.println("\nMatricula\n");
                                 String matriculaCar = user.next();
-                                System.out.println("\nVelocidad Maxima:\n");
-                                int velocidadMaximaCar = user.nextInt();
-                                userCar = new Coche(velocidadMaximaCar, marcaCar, modeloCar, matriculaCar);
+                                while (true) {
+                                        System.out.println("\nVelocidad Maxima:\n");
+                                        if (user.hasNextInt()) {
+                                                int velocidadMaximaCar = user.nextInt();
+                                                userCar = new Coche(velocidadMaximaCar, marcaCar, modeloCar, matriculaCar);
+                                                break;
+                                        } else {
+                                                System.out.println("Ingresa la Velocidad en Enteros");
+                                                user.next(); // limpiamos la entrada invalida
+                                        }  
+                                }
                                 break;
 
                         // Adicion caso 2: BICICLETA
@@ -73,9 +81,20 @@ public class MenuCustom implements MenuStep1, Robable {
                                 String marcaBike = user.next();
                                 System.out.println("\nModelo:\n");
                                 String modeloBike = user.next();
-                                System.out.println("\nVelocidad Maxima:\n");
-                                int velocidadMaximaBike = user.nextInt();
-                                userBike = new Bicicleta(velocidadMaximaBike, marcaBike, modeloBike);
+                                
+                                while (true) {
+                                        System.out.println("\nVelocidad Maxima:\n");
+                                        if (user.hasNextInt()) {
+                                                int velocidadMaximaBike = user.nextInt();
+                                                userBike = new Bicicleta(velocidadMaximaBike, marcaBike, modeloBike);
+                                                break;
+                                        } else {
+                                                System.out.println("Ingresa la Velocidad en Enteros");
+                                                user.next(); // limpiamos la entrada invalida
+                                        }  
+                                }
+                                
+                                
                                 break;
 
                         // Adicion caso 3: BARCO
@@ -88,12 +107,21 @@ public class MenuCustom implements MenuStep1, Robable {
                                 String modeloShip = user.next();
                                 System.out.println("\nMatricula\n");
                                 String matriculaShip = user.next();
-                                System.out.println("\nVelocidad Maxima:\n");
-                                int velocidadMaximaShip = user.nextInt();
                                 System.out.println("\nNombre:\n");
                                 String nombreShip = user.next();
-                                userShip = new Barco(velocidadMaximaShip, marcaShip, modeloShip, matriculaShip,
-                                                nombreShip);
+                                while (true) {
+                                        System.out.println("\nVelocidad Maxima:\n");
+                                        if (user.hasNextInt()) {
+                                                int velocidadMaximaShip = user.nextInt();
+                                                userShip = new Barco(velocidadMaximaShip, marcaShip, modeloShip, matriculaShip,
+                                                        nombreShip);
+                                                break;
+                                        } else {
+                                                System.out.println("Ingresa la Velocidad en Enteros");
+                                                user.next(); // limpiamos la entrada invalida
+                                        }
+                                }
+                                
                                 break;
 
                         // Adicion caso 4: AVION
@@ -106,10 +134,17 @@ public class MenuCustom implements MenuStep1, Robable {
                                 String modeloPlane = user.next();
                                 System.out.println("\nMatricula\n");
                                 String matriculaPlane = user.next();
-                                System.out.println("\nVelocidad Maxima:\n");
-                                int velocidadMaximaPlane = user.nextInt();
-                                userPlane = new Avion(velocidadMaximaPlane, marcaPlane, modeloPlane,
-                                                matriculaPlane);
+                                while (true) {
+                                        System.out.println("\nVelocidad Maxima:\n");
+                                        if (user.hasNextInt()) {
+                                                int velocidadMaximaPlane = user.nextInt();
+                                                userPlane = new Avion(velocidadMaximaPlane, marcaPlane, modeloPlane,matriculaPlane);
+                                                break;
+                                        } else {
+                                                System.out.println("Ingresa la Velocidad en Enteros");
+                                                user.next(); // limpiamos la entrada invalida
+                                        }
+                                }                                                               
                                 break;
                 }
 
