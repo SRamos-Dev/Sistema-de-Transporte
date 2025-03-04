@@ -5,6 +5,10 @@ public abstract class Vehiculo implements Sprites {
     protected String marca;
     protected String modelo;
 
+    // CONSTRUCTOR VACIO
+    public Vehiculo() {
+    };
+
     public Vehiculo(int velocidadMaxima, String marca, String modelo){
         this.velocidadMaxima = velocidadMaxima;
         this.marca = marca;

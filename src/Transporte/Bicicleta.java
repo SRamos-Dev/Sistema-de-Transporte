@@ -2,6 +2,10 @@ package Transporte;
 
 public class Bicicleta extends Vehiculo implements SinMotor {
 
+    // CONSTRUCTOR VACIO
+    public Bicicleta() {
+    }
+
     public Bicicleta(int velocidadMaxima, String marca, String modelo){
         super(velocidadMaxima, marca, modelo);
     }

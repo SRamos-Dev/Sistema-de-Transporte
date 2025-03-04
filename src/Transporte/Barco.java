@@ -5,6 +5,10 @@ public class Barco extends Vehiculo implements Robable {
     private String matricula;
     private String nombre;
 
+     // CONSTRUCTOR VACIO
+     public Barco() {
+     }
+
     public Barco(int velocidadMaxima, String marca, String modelo, String matricula, String nombre){
         super(velocidadMaxima, marca, modelo);
         this.matricula = matricula;

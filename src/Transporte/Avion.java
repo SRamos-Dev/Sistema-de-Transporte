@@ -4,6 +4,10 @@ public final class Avion extends Vehiculo implements Robable {
     
     private String matricula;
 
+    // CONSTRUCTOR VACIO
+    public Avion() {
+    }
+
     public Avion(int velocidadMaxima, String marca, String modelo, String matricula){
         super(velocidadMaxima, marca, modelo);
         this.matricula = matricula;
