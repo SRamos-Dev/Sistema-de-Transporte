@@ -1,5 +1,15 @@
 package Transporte;
 
+/**
+ * La clase Barco representa un tipo de vehículo que es un barco.
+ * Extiende la clase Vehiculo e implementa la interfaz Robable.
+ * 
+ * Esta clase contiene información sobre la matrícula y el nombre del barco,
+ * así como métodos para describir el barco y encender su motor.
+ * 
+ * @see Vehiculo
+ * @see Robable
+ */
 public class Barco extends Vehiculo implements Robable {
     
     private String matricula;

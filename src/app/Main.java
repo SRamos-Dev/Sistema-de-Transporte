@@ -1,15 +1,20 @@
 package app;
 
-
 import Interacciones.Menu;
 
-
+/**
+ * Main class to run the application.
+ */
 public class Main {
 
-    public static void main (String[] args){
-
-    Menu menu = new Menu(Menu.title);
-    Menu.entryMenu();
-    menu.runMenu();
+    /**
+     * The main method to start the application.
+     * 
+     * @param args Command line arguments
+     */
+    public static void main(String[] args) {
+        Menu menu = new Menu(Menu.title);
+        Menu.entryMenu();
+        menu.runMenu();
     }
 }

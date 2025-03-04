@@ -2,8 +2,12 @@ package Interacciones;
 
 import java.util.Scanner;
 
+/**
+ * Interface MenuStep1 que proporciona un menú interactivo para seleccionar diferentes tipos de programas.
+ */
 public interface MenuStep1 {
 
+    // Constantes para colores y estilos de texto
     public static final String RESET = "\u001B[0m";
     public static final String BLACK = "\u001B[30m";
     public static final String RED = "\u001B[31m";
@@ -18,9 +22,12 @@ public interface MenuStep1 {
     public static final String BOLD = "\u001B[1m";
     public static final String UNBOLD = "\u001B[21m";
 
-    // DECLARACION DE SCANNER
+    // Declaración de Scanner
     Scanner user = new Scanner(System.in);
 
+    /**
+     * Método que ejecuta el menú interactivo.
+     */
     public default void runMenu() {
 
         boolean execute;
@@ -39,7 +46,7 @@ public interface MenuStep1 {
 
             execute = (programType == 1 || programType == 2) ? true : false;
             if (!execute) {
-                System.out.println("\n" + "Gracias por utilizar el programa!, CERRANDO...\n");
+                System.out.println("\n" + CYAN + "Gracias por utilizar el programa!, CERRANDO...\n");
                 break;
             }
             if (programType == 1) {
@@ -53,10 +60,15 @@ public interface MenuStep1 {
                 return;
 
         }
-        // SCANNER CLOSE
+        // Cierre del Scanner
         user.close();
     }
 
+    /**
+     * Método que revisa la entrada del usuario y asegura que sea un número entero.
+     * 
+     * @return el número entero ingresado por el usuario.
+     */
     public static int revisarEntrada() {
         while (true) {
             if (user.hasNextInt()) {
@@ -68,6 +80,12 @@ public interface MenuStep1 {
         }
     }
 
+    /**
+     * Método que revisa la entrada del usuario y asegura que sea un número entero dentro de un rango específico.
+     * 
+     * @param opcion el número máximo permitido.
+     * @return el número entero ingresado por el usuario dentro del rango permitido.
+     */
     public static int revisarEntrada(int opcion) {
         while (true) {
             if (user.hasNextInt()) {
