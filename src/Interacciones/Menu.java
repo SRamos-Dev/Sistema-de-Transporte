@@ -1,12 +1,24 @@
 package Interacciones;
 
+/**
+ * The Menu class represents a menu with a title and an entry menu display.
+ */
 public class Menu implements MenuStep1 {
     public static String title;
-    
-    public Menu(String title){
+
+    /**
+     * Constructs a Menu with the specified title.
+     *
+     * @param title the title of the menu
+     */
+    public Menu(String title) {
         Menu.title = title;
     }
-    public static void entryMenu(){
+
+    /**
+     * Displays the entry menu with a formatted title.
+     */
+    public static void entryMenu() {
         String title = 
             PURPLE + BOLD +
             "\n________________________________________________________________________________________________________                    \n"   +
@@ -31,6 +43,5 @@ public class Menu implements MenuStep1 {
         for (String line : lines) {
             System.out.printf("%" + ((200 + line.length()) / 2) + "s%n", line);
         }
-        
     }
 }
