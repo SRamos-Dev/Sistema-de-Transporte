@@ -219,26 +219,6 @@ public class MenuCustom implements MenuStep1, Robable {
                 user.close();
         }
 
-<<<<<<< Updated upstream
-}
-=======
-        System.out.println(
-            "\nQue deseas hacer con tu "+nombreVehiculo+"?:\n\n"+
-            "1. Encender motor\n"+
-            "2. Desplazarlo a otra zona\n"+
-            "3. Recibir una descripcion de este\n");
-        
-        int operacionVehiculo = user.nextInt();
-        if (operacionVehiculo == 1) {
-            boolean arrancarMotor = menu.robarMotor(provinciaId, zonaId);
-            System.out.println(arrancarMotor ?
-             "\nEnhorabuena el motor esta arrancado\n" :
-             "\nVAYA!, parece que te han hecho el truco rumano.\n"+
-             "Unos ladrones de "+provincias.get(provinciaId-1)+" te han robado el motor.\n"+
-             "Lo siento...");
-        }
-        
-    }
 
 }
->>>>>>> Stashed changes
+
