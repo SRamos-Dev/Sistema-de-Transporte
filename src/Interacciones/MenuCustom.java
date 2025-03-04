@@ -4,16 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Transporte.Avion;
-import Transporte.Barco;
-import Transporte.Bicicleta;
-import Transporte.Coche;
-import Transporte.Robable;
+import Transporte.*;
 
 public class MenuCustom implements MenuStep1, Robable {
 
-        public MenuCustom() {
-        }
+        // public MenuCustom() {
+        // }
 
         public void runCustom() {
 
@@ -167,31 +163,46 @@ public class MenuCustom implements MenuStep1, Robable {
                         zonaId = (user.nextInt() - 1);
                 }
 
-                //CONDICIONAL PARA MOSTRAR EN PANTALLA EL METODO DESCRIBIR() DE ACUERDO AL VEHICULO INGRESADO POR USUARIO
+                // CONDICIONAL PARA MOSTRAR EN PANTALLA EL METODO DESCRIBIR() DE ACUERDO AL
+                // VEHICULO INGRESADO POR USUARIO
                 else {
                         switch (vehiculo) {
                                 case 1:
-                                        System.out.println("------- C  O  C H E ------- ");
+                                        System.out.println("------- C O C H E ------- ");
                                         userCar.describir();
+                                        System.out.println("Se encuentra en la provincia de "
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
 
                                 case 2:
                                         System.out.println("------- B I C I C L E T A -------");
                                         userBike.describir();
+                                        System.out.println("Se encuentra en la provincia de "
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
 
                                 case 3:
                                         System.out.println("------- B A R C O -------");
                                         userShip.describir();
+                                        System.out.println("Se encuentra en la provincia de "
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
 
                                 case 4:
                                         System.out.println("------- A V I O N -------");
                                         userPlane.describir();
+                                        System.out.println("Se encuentra en la provincia de "
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
                         }
                 }
-
+                //user.close();
+                //Volver a Menu
+                Menu menuBack = new Menu(Menu.title);
+                menuBack.runMenu();
+                user.close();
+           
         }
+        
 
 }
