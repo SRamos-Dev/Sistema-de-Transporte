@@ -35,7 +35,7 @@ public interface MenuStep1 {
                             BLUE + "3. " + GREEN + "Salir \n"
                             + RESET);
 
-            int programType = user.nextInt();
+            int programType = revisarEntrada(3);
 
             execute = (programType == 1 || programType == 2) ? true : false;
             if (!execute) {
@@ -56,6 +56,34 @@ public interface MenuStep1 {
         }
         // SCANNER CLOSE
         user.close();
+    }
+
+    public static int revisarEntrada() {
+        while (true) {
+            if (user.hasNextInt()) {
+                return user.nextInt();
+            } else {
+                System.out.println("Ingresa el número en Enteros");
+                user.next(); // limpiamos la entrada invalida
+            }
+        }
+    }
+
+    public static int revisarEntrada(int opcion) {
+        while (true) {
+            if (user.hasNextInt()) {
+                int num = user.nextInt();
+                if (num <= opcion) {
+                    return num;
+                } else {
+                    System.out.println("Ingrese un numero valido");
+                }
+
+            } else {
+                System.out.println("Ingresa un número valido");
+                user.next(); // limpiamos la entrada invalida
+            }
+        }
     }
 
     /*
