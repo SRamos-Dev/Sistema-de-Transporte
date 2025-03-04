@@ -187,6 +187,7 @@ public class MenuCustom implements MenuStep1, Robable {
                                 System.out.println(
                                                 RED + zonaAnterior + "\n" + CYAN + userCar.spriteVehiculos(vehiculo - 1)
                                                                 + "\n\n" + YELLOW + zonaPosterior + RESET);
+                                break;
                         }
 
                         // CONDICIONAL PARA MOSTRAR EN PANTALLA EL METODO DESCRIBIR() DE ACUERDO AL
@@ -233,6 +234,9 @@ public class MenuCustom implements MenuStep1, Robable {
                         }
                 } while (exit);
 
+                // Volver a Menu
+                Menu menuBack = new Menu(Menu.title);
+                menuBack.runMenu();
                 user.close();
         }
 
