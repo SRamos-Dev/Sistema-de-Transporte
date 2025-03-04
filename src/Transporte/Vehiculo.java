@@ -18,22 +18,27 @@ public abstract class Vehiculo implements Sprites {
     /**
      * Constructor con parámetros.
      * 
-     * @param velocidadMaxima La velocidad máxima del vehículo.
-     * @param marca La marca del vehículo.
-     * @param modelo El modelo del vehículo.
+     * @param velocidadMaxima La velocidad máxima del vehículo. Se evalua si es negativo se inicializa con 0.
+     * @param marca           La marca del vehículo.
+     * @param modelo          El modelo del vehículo.
      */
-    public Vehiculo(int velocidadMaxima, String marca, String modelo){
-        this.velocidadMaxima = velocidadMaxima;
+    public Vehiculo(int velocidadMaxima, String marca, String modelo) {
+
+        if (velocidadMaxima < 0) {
+            this.velocidadMaxima = 0;
+
+        } else
+            this.velocidadMaxima = velocidadMaxima;
         this.marca = marca;
         this.modelo = modelo;
     }
-    
+
     /**
      * Obtiene la velocidad máxima del vehículo.
      * 
      * @return La velocidad máxima.
      */
-    public int getVelocidadMaxima(){
+    public int getVelocidadMaxima() {
         return velocidadMaxima;
     }
 
@@ -42,7 +47,7 @@ public abstract class Vehiculo implements Sprites {
      * 
      * @return La marca.
      */
-    public String getMarca(){
+    public String getMarca() {
         return marca;
     }
 
@@ -51,7 +56,7 @@ public abstract class Vehiculo implements Sprites {
      * 
      * @return El modelo.
      */
-    public String getModelo(){
+    public String getModelo() {
         return modelo;
     }
 
@@ -60,12 +65,12 @@ public abstract class Vehiculo implements Sprites {
      * 
      * @param velocidadMaxima La velocidad máxima a establecer.
      */
-    public void setVelocidadMaxima(int velocidadMaxima){
-        if(velocidadMaxima >= 0){ 
+    public void setVelocidadMaxima(int velocidadMaxima) {
+        if (velocidadMaxima >= 0) {
             this.velocidadMaxima = velocidadMaxima;
         } else {
             System.out.println("La velocidad no puede ser negativa.");
-        } 
+        }
     }
 
     /**
@@ -73,7 +78,7 @@ public abstract class Vehiculo implements Sprites {
      * 
      * @param marca La marca a establecer.
      */
-    public void setMarca(String marca){
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
@@ -82,14 +87,14 @@ public abstract class Vehiculo implements Sprites {
      * 
      * @param modelo El modelo a establecer.
      */
-    public void setModelo(String modelo){
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    
+
     /**
      * Arranca el vehículo.
      */
-    public void arrancar(){
+    public void arrancar() {
         System.out.println("El vehiculo esta en marcha.");
     }
 

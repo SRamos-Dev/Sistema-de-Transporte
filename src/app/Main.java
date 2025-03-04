@@ -1,6 +1,5 @@
-package app;
+import Interacciones.*;
 
-import Interacciones.Menu;
 
 /**
  * Main class to run the application.

@@ -3,7 +3,8 @@ package Interacciones;
 import java.util.Scanner;
 
 /**
- * Interface MenuStep1 que proporciona un menú interactivo para seleccionar diferentes tipos de programas.
+ * Interface MenuStep1 que proporciona un menú interactivo para seleccionar
+ * diferentes tipos de programas.
  */
 public interface MenuStep1 {
 
@@ -81,7 +82,8 @@ public interface MenuStep1 {
     }
 
     /**
-     * Método que revisa la entrada del usuario y asegura que sea un número entero dentro de un rango específico.
+     * Método que revisa la entrada del usuario y asegura que sea un número entero
+     * dentro de un rango específico.
      * 
      * @param opcion el número máximo permitido.
      * @return el número entero ingresado por el usuario dentro del rango permitido.
