@@ -200,6 +200,7 @@ public class MenuCustom implements MenuStep1, Robable {
                 //Volver a Menu
                 Menu menuBack = new Menu(Menu.title);
                 menuBack.runMenu();
+                user.close();
            
         }
         
