@@ -171,32 +171,35 @@ public class MenuCustom implements MenuStep1, Robable {
                                         System.out.println("------- C O C H E ------- ");
                                         userCar.describir();
                                         System.out.println("Se encuentra en la provincia de "
-                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId-1));
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
 
                                 case 2:
                                         System.out.println("------- B I C I C L E T A -------");
                                         userBike.describir();
                                         System.out.println("Se encuentra en la provincia de "
-                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId-1));
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
 
                                 case 3:
                                         System.out.println("------- B A R C O -------");
                                         userShip.describir();
                                         System.out.println("Se encuentra en la provincia de "
-                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId-1));
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
 
                                 case 4:
                                         System.out.println("------- A V I O N -------");
                                         userPlane.describir();
                                         System.out.println("Se encuentra en la provincia de "
-                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId-1));
+                                                        + provincias.get(provinciaId - 1) + " y en la zona de " + zonas.get(provinciaId-1).get(zonaId));
                                         break;
                         }
                 }
-                user.close();
+                //user.close();
+                //Volver a Menu
+                Menu menuBack = new Menu(Menu.title);
+                menuBack.runMenu();
            
         }
         
