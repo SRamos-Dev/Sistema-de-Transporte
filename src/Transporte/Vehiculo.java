@@ -1,6 +1,6 @@
 package Transporte;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Sprites {
     protected int velocidadMaxima;
     protected String marca;
     protected String modelo;
