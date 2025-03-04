@@ -10,7 +10,11 @@ public abstract class Vehiculo {
     };
 
     public Vehiculo(int velocidadMaxima, String marca, String modelo) {
-        this.velocidadMaxima = velocidadMaxima;
+        if (velocidadMaxima < 0) {
+            this.velocidadMaxima = 0;
+
+        } else
+            this.velocidadMaxima = velocidadMaxima;
         this.marca = marca;
         this.modelo = modelo;
     }
