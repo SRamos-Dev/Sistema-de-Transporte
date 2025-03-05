@@ -181,7 +181,7 @@ public class MenuCustom implements MenuStep1, Robable {
 
                                 int zonaSiguiente = (user.nextInt() - 1);
 
-                                String[] zonasArray = userCar.spriteZonas(provinciaId, zonaId, zonaSiguiente);
+                                String[] zonasArray = userCar.spriteZonas(provinciaId, zonaId, zonaSiguiente, vehiculo);
                                 String zonaAnterior = zonasArray[0];
                                 String zonaPosterior = zonasArray[1];
                                 System.out.println(

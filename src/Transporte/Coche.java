@@ -53,6 +53,7 @@ public class Coche extends Vehiculo implements Robable {
      */
     @Override
     public void describir() {
+
         System.out.println(
             "Automovil de la marca "+marca+
             " modelo "+modelo+" y con matricula "+matricula+".\n"+
