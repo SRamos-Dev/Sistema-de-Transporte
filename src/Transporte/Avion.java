@@ -50,6 +50,7 @@ public final class Avion extends Vehiculo implements Robable {
      */
     @Override
     public void describir() {
+
         System.out.println(
             "Avión de la marca "+marca+" modelo "+modelo+
             " y matrícula "+matricula+".\n"+

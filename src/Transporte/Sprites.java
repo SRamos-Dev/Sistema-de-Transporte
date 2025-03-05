@@ -60,7 +60,7 @@ public interface Sprites {
      * @param zonaSiguiente the index of the next zone
      * @return an array containing the sprite representations of the current and next zones
      */
-    public default String[] spriteZonas(int provinciaId, int zonaId, int zonaSiguiente){
+    public default String[] spriteZonas(int provinciaId, int zonaId, int zonaSiguiente, int vehiculo){
 
         ArrayList<ArrayList<String>> zonas = new ArrayList<>();
         zonas.add(new ArrayList<>(
@@ -81,7 +81,7 @@ public interface Sprites {
             "|                                            |\n"+
             "|                                            |\n"+
             "                                              \n"+
-            "          "+zonasProvincia.get(zonaId)+"          \n"+
+            "          "+zonasProvincia.get(zonaId-1)+"          \n"+
             "                                              \n"+
             "|                                            |\n"+
             "|                                            |\n"+
@@ -90,13 +90,13 @@ public interface Sprites {
 
             // Bicicleta
             " ____________________________________________\n"+
-            "           "+zonasProvincia.get(zonaId)+"       \n"+
+            "           "+zonasProvincia.get(zonaId-1)+"       \n"+
             "|____________________________________________|\n",
 
             // Barco
             " ___________________________________________\n"+
             "|                                           |\n"+
-            "           "+zonasProvincia.get(zonaId)+"        \n"+
+            "           "+zonasProvincia.get(zonaId-1)+"        \n"+
             "                                             \n"+
             "|___________________________________________|\n",
 
@@ -106,7 +106,7 @@ public interface Sprites {
             "|                                           |\n"+
             "|                                           |\n"+
             "                                             \n"+
-            "           "+zonasProvincia.get(zonaId)+"         \n"+
+            "           "+zonasProvincia.get(zonaId-1)+"         \n"+
             "                                             \n"+
             "|                                           |\n"+
             "|___________________________________________|\n"
@@ -151,7 +151,7 @@ public interface Sprites {
             "|                                           |\n"+
             "|___________________________________________|\n"
         ));
-        String[] spritesUbicacion = {spritesZonaActual.get(zonaId), spritesZonaSiguiente.get(zonaId)};
+        String[] spritesUbicacion = {spritesZonaActual.get(vehiculo-1), spritesZonaSiguiente.get(vehiculo-1)};
         return spritesUbicacion ;
     }
 }
